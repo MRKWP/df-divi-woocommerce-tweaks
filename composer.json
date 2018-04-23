@@ -1,0 +1,27 @@
+{
+    "name": "diviframework/df-divi-woocommerce-tweaks",
+    "description": "WooCommerce Tweaks for Divi theme.",
+    "type": "project",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Divi Framework",
+            "email": "support@diviframework.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:DiviFramework/update-checker.git"
+        }
+    ],
+    "require": {
+        "pimple/pimple": "~3.0",
+        "diviframework/update-checker" : "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "DF\\WC\\Tweaks\\" : "src/"
+        }
+    }
+}
