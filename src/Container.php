@@ -76,14 +76,15 @@ class Container extends PimpleContainer {
 
 		add_action('plugins_loaded', array($this['themes'], 'checkDependancies'));
 
-		$styles = $this['tweaks']->get_styles();
+		$container = $this;
 
-		if (isset($_GET['customize_theme']) && $_GET['customize_theme']) {
-			add_action('wp_footer', function () use ($styles) {
-				echo "<style>" . $styles . "</style>";
-			}, 10000);
+		add_action('customize_preview_init', function () use ($container) {
+			echo "<style>" . $container['tweaks']->get_styles() . "</style>";
 
-		} else {
+		});
+
+		if (!isset($_GET['customize_changeset_uuid']) || !$_GET['customize_changeset_uuid']) {
+			$styles = $this['tweaks']->get_styles();
 			add_action('wp_enqueue_scripts', function () use ($styles) {
 				wp_add_inline_style('divi-style', $styles);
 			}, 1000);

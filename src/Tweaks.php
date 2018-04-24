@@ -14,15 +14,11 @@ class Tweaks {
 	}
 
 	public function get_styles() {
-		$mods = get_theme_mods();
-
-		$tweak_mods = array();
-		if (isset($mods['df_divi_wc_tweaks'])) {
-			$tweak_mods = $mods['df_divi_wc_tweaks'];
-		}
+		$mods = get_theme_mod('df_divi_wc_tweaks', array());
 
 		// var_dump($mods);exit;
-		$styles = $this->add_to_cart_btn_style($tweak_mods);
+		file_put_contents(WP_CONTENT_DIR . '/styles.json', json_encode($mods));
+		$styles = $this->add_to_cart_btn_style($mods);
 
 		return $styles;
 	}

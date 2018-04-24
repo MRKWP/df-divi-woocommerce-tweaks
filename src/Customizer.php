@@ -56,13 +56,6 @@ class Customizer {
 			'section' => 'df_wc_add_to_cart_button',
 			'default' => '',
 			'option_type' => 'theme_mod',
-			'output' => array(
-				array(
-					'element' => "{$btn_selector} {$btn_selector_hover}",
-					'property' => 'background-color',
-					'suffix' => ' !important',
-				),
-			),
 			'choices' => array(
 				'alpha' => true,
 			),
@@ -84,12 +77,6 @@ class Customizer {
 				'text-transform' => 'none',
 				'text-align' => 'center',
 			),
-			'output' => array(
-				array(
-					'element' => "{$btn_selector} {$btn_selector_hover}",
-				),
-			),
-
 		));
 	}
 
