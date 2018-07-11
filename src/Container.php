@@ -41,13 +41,6 @@ class Container extends PimpleContainer {
 			return new Activation($container);
 		};
 
-		$this['shortcodes'] = function ($container) {
-			return new Shortcodes($container);
-		};
-
-		$this['divi_modules'] = function ($container) {
-			return new DiviModules($container);
-		};
 
 		$this['plugins'] = function ($container) {
 			return new Plugins($container);
@@ -73,8 +66,6 @@ class Container extends PimpleContainer {
 			add_action('init', array($this['customizer'], 'init'));
 			add_action('customize_register', array($this['customizer'], 'register_sections'));
 		}
-
-		add_action('plugins_loaded', array($this['themes'], 'checkDependancies'));
 
 		$container = $this;
 
