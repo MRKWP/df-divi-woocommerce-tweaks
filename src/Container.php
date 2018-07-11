@@ -53,6 +53,11 @@ class Container extends PimpleContainer {
 		$this['license'] = function ($container) {
 			return new PluginLicense($container, 'https://www.diviframework.com');
 		};
+
+		$this['kirki'] = function ($container) {
+		    return new Kirki($container);
+		};
+		
 	}
 
 	/**
@@ -75,8 +80,8 @@ class Container extends PimpleContainer {
 		});
 
 		if (!isset($_GET['customize_changeset_uuid']) || !$_GET['customize_changeset_uuid']) {
-			$styles = $this['tweaks']->get_styles();
-			add_action('wp_enqueue_scripts', function () use ($styles) {
+			add_action('wp_enqueue_scripts', function () use ($container) {
+				$styles = $container['tweaks']->get_styles();
 				wp_add_inline_style('divi-style', $styles);
 			}, 1000);
 
