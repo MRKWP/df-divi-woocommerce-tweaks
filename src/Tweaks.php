@@ -26,10 +26,13 @@ class Tweaks {
 			// die('here');
 			$btn_selector .= 'html body.woocommerce-page div.woocommerce form.woocommerce-cart-form div.coupon button.button, html body.woocommerce-page div.woocommerce form.woocommerce-cart-form button[type="submit"], .woocommerce-page div.cart-collaterals div.wc-proceed-to-checkout a.button, .woocommerce-page form.woocommerce-checkout div.place-order button.button,';
 
+			$btn_selector = 'html .woocommerce .woocommerce-error a.button, .woocommerce .woocommerce-info a.button, html .woocommerce .woocommerce-message a.button, html .woocommerce .woocommerce-info  a.button,';
+
 			$btn_selector .= '.woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce div.product form.cart .single_add_to_cart_button';
 
 
 			$btn_selector_hover .= 'html body.woocommerce-page div.woocommerce form.woocommerce-cart-form div.coupon button.button:hover, html body.woocommerce-page div.woocommerce form.woocommerce-cart-form button[type="submit"]:hover, .woocommerce-page div.cart-collaterals div.wc-proceed-to-checkout a.button:hover, .woocommerce-page form.woocommerce-checkout div.place-order button.button:hover,';
+			$btn_selector_hover = 'html .woocommerce .woocommerce-error a.button:hover, .woocommerce .woocommerce-info a.button:hover, html .woocommerce .woocommerce-message a.button:hover, html .woocommerce .woocommerce-info  a.button:hover,';
 
 			$btn_selector_hover .= 'body .et_pb_button:hover, .woocommerce a.button.alt:hover, .woocommerce-page a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce-page button.button.alt:hover, .woocommerce input.button.alt:hover, .woocommerce-page input.button.alt:hover, .woocommerce #respond input#submit.alt:hover, .woocommerce-page #respond input#submit.alt:hover, .woocommerce #content input.button.alt:hover, .woocommerce-page #content input.button.alt:hover, .woocommerce a.button:hover, .woocommerce-page a.button:hover, .woocommerce button.button:hover, .woocommerce-page button.button:hover, .woocommerce input.button:hover, .woocommerce-page input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce-page #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page #content input.button:hover,.woocommerce div.product form.cart .single_add_to_cart_button:hover';
 
@@ -59,7 +62,7 @@ class Tweaks {
 				$styles[$btn_selector][] = $this->container['kirki']->raw_css('kirki-typography', $mods['btn_font']);
 			}
 
-			$alert_message_selector = '.woocommerce .woocommerce-error, .woocommerce .woocommerce-info, .woocommerce .woocommerce-message, .woocommerce .woocommerce-info a';
+			$alert_message_selector = 'html .woocommerce .woocommerce-error, .woocommerce .woocommerce-info, html .woocommerce .woocommerce-message, html .woocommerce .woocommerce-info a';
 
 			if (isset($mods['alert_bg_color'])) {
 				$styles[$alert_message_selector][] = sprintf('background-color: %s !important;', $mods['alert_bg_color']);
