@@ -15,6 +15,9 @@ class Tweaks {
 
 	public function get_styles() {
 		$mods = get_theme_mod('df_divi_wc_tweaks', array());
+		$mods = wp_parse_args( $mods, array(
+			'button_line_height' => '1.5',
+		) );
 		$styles = $this->add_to_cart_btn_style($mods);
 		return $styles;
 	}
@@ -67,6 +70,10 @@ class Tweaks {
 
 			$styles['.woocommerce-page .return-to-shop a.button:after'][] = 'position:relative !important';
 
+
+			//line height button
+			$styles[' input.button:after, .woocommerce-page #content input.button.alt:after, .woocommerce-page #content input.button:after, .woocommerce-page #respond input#submit.alt:after, .woocommerce-page #respond input#submit:after, .woocommerce-page a.button.alt:after, .woocommerce-page a.button:after, .woocommerce-page button.button.alt:after, .woocommerce-page button.button:after, .woocommerce-page input.button.alt:after, .woocommerce-page input.button:after'][] = 'line-height:' . $mods['button_line_height'];
+
 		} //end button styles.
 
 		$alert_message_selector = 'html .woocommerce .woocommerce-error, .woocommerce .woocommerce-info, html .woocommerce .woocommerce-message, html .woocommerce .woocommerce-info a, html .woocommerce-page .woocommerce-message';
@@ -89,6 +96,9 @@ class Tweaks {
 		if (isset($mods['sale_badge_font'])) {
 			$styles[$sale_badge_selector][] = $this->container['kirki']->raw_css('kirki-typography', $mods['sale_badge_font']);
 		}
+
+
+
 
 		
 

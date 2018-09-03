@@ -53,7 +53,7 @@ class Customizer {
 	}
 
 	public function add_fields() {
-		$this->add_to_cart_btn_fields();
+		$this->woocommerce_button_fields();
 		$this->alert_messages_fields();
 		$this->sale_badge_fields();
 	}
@@ -122,7 +122,7 @@ class Customizer {
 
 	}
 
-	public function add_to_cart_btn_fields() {
+	public function woocommerce_button_fields() {
 		\Kirki::add_field('df_divi_wc_tweaks[enable_add_to_cart_btn]', array(
 			'type' => 'checkbox',
 			'settings' => 'df_divi_wc_tweaks[enable_add_to_cart_btn]',
@@ -185,33 +185,48 @@ class Customizer {
 		));
 
 		\Kirki::add_field('df_divi_wc_tweaks[btn_border_radius]', array(
-		    'type'        => 'slider',
-		    'settings'    => 'df_divi_wc_tweaks[btn_border_radius]',
-		    'label'       => esc_attr__('Border Radius', 'kirki'),
-		    'description' => esc_attr__('', 'kirki'),
-		    'section'     => 'df_wc_add_to_cart_button',
-		    'default'     => 0,
-		    'choices'     => array(
-		                 'min'  => 0,
-		                'max'  => 100,
-		                'step' => 1,
-		            ),
-		    'suffix' => 'px'
+			'type'        => 'slider',
+			'settings'    => 'df_divi_wc_tweaks[btn_border_radius]',
+			'label'       => esc_attr__('Border Radius', 'kirki'),
+			'description' => esc_attr__('', 'kirki'),
+			'section'     => 'df_wc_add_to_cart_button',
+			'default'     => 0,
+			'choices'     => array(
+				'min'  => 0,
+				'max'  => 100,
+				'step' => 1,
+			),
+			'suffix' => 'px'
 		));
 
 		\Kirki::add_field('df_divi_wc_tweaks[btn_border_radius_hover]', array(
-		    'type'        => 'slider',
-		    'settings'    => 'df_divi_wc_tweaks[btn_border_radius_hover]',
-		    'label'       => esc_attr__('Border Radius (Hover)', 'kirki'),
-		    'description' => esc_attr__('', 'kirki'),
-		    'section'     => 'df_wc_add_to_cart_button',
-		    'default'     => 0,
-		    'choices'     => array(
-		                 'min'  => 0,
-		                'max'  => 100,
-		                'step' => 1,
-		            ),
-		    'suffix' => 'px'
+			'type'        => 'slider',
+			'settings'    => 'df_divi_wc_tweaks[btn_border_radius_hover]',
+			'label'       => esc_attr__('Border Radius (Hover)', 'kirki'),
+			'description' => esc_attr__('', 'kirki'),
+			'section'     => 'df_wc_add_to_cart_button',
+			'default'     => 0,
+			'choices'     => array(
+				'min'  => 0,
+				'max'  => 100,
+				'step' => 1,
+			),
+			'suffix' => 'px'
+		));
+
+		\Kirki::add_field('df_divi_wc_tweaks[button_line_height]', array(
+			'type'        => 'slider',
+			'settings'    => 'df_divi_wc_tweaks[button_line_height]',
+			'label'       => esc_attr__('Button Line Height (Hover)', 'kirki'),
+			'description' => esc_attr__('Set the button line height on hover. Helps to fix the position of the > character on hover', 'kirki'),
+			'section'     => 'df_wc_add_to_cart_button',
+			'default'     => '1.5',
+			'choices'     => array(
+				'min'  => 0,
+				'max'  => 10,
+				'step' => 0.1,
+			),
+			'suffix' => ''
 		));
 
 	}
