@@ -7,16 +7,16 @@
  * Author URI:      https://www.diviframework.com
  * Text Domain:     df-divi-woocommerce-tweaks
  * Domain Path:     /languages
- * Version:         1.3.0
+ * Version:         1.3.1
  *
  * @package
  */
 
 if (!defined('ABSPATH')) {
-	exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 
-define('DF_DIVI_WC_TWEAKS_VERSION', '1.3.0');
+define('DF_DIVI_WC_TWEAKS_VERSION', '1.3.1');
 define('DF_DIVI_WC_TWEAKS_DIR', __DIR__);
 define('DF_DIVI_WC_TWEAKS_URL', plugins_url('/' . basename(__DIR__)));
 
