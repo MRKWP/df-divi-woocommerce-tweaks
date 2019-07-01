@@ -1,114 +1,66 @@
-=== Divi WooCommerce Tweaks ===
-Contributors: (this should be a list of wordpress.org userid's)
-Donate link: http://example.com/
-Tags: comments, spam
-Requires at least: 3.7
-Tested up to: 4.7
-Stable tag: 0.1.0
+=== WooCommerce Colours For Divi ===
+Contributors: mrkdevelopment,diviframework
+Donate link: https://www.mrkwp.com
+Tags: divi, woocommerce, colours
+Requires at least: 4.8
+Tested up to: 5.2.2
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Here is a short description of the plugin.  This should be no more than 150 characters.  No markup here.
+A tool to manage woocommerce colors for your divi website
 
 == Description ==
 
-This is the long description.  No limit, and you can use Markdown (as well as in the following sections).
+The default WooCommerce colour styles in Divi are very basic. Currently, there are no customisation options for buttons, notifications, product sale badges etc. This can become an issue when you are trying to achieve brand consistency across a website.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Now, imagine if you could…
 
-A few notes about the sections above:
+* Change the text size, colour, line spacing, background colour, border radius and more of your WooCommerce Buttons. How about changing the button background and text colour on hover?
+* Change the background and text colour of your WooCommerce Alert Messages.
+* Change the background and text colour of your WooCommerce Sale Badges.
 
-*   "Contributors" is a comma separated list of wp.org/wp-plugins.org usernames
-*   "Tags" is a comma separated list of tags that apply to the plugin
-*   "Requires at least" is the lowest version that the plugin will work on
-*   "Tested up to" is the highest version that you've *successfully used to test the plugin*. Note that it might work on
-higher versions... this is just the highest one you've verified.
-*   Stable tag should indicate the Subversion "tag" of the latest stable version, or "trunk," if you use `/trunk/` for
-stable.
+![WooCommerce Colours For Divi](assets/screenshot-1.png "WooCommerce Colours For Divi")
 
-    Note that the `readme.txt` of the stable tag is the one that is considered the defining one for the plugin, so
-if the `/trunk/readme.txt` file says that the stable tag is `4.3`, then it is `/tags/4.3/readme.txt` that'll be used
-for displaying information about the plugin.  In this situation, the only thing considered from the trunk `readme.txt`
-is the stable tag pointer.  Thus, if you develop in trunk, you can update the trunk `readme.txt` to reflect changes in
-your in-development version, without having that information incorrectly disclosed about the current stable version
-that lacks those changes -- as long as the trunk's `readme.txt` points to the correct stable tag.
+Look no further! The WooCommerce Colours For Divi plugin does what you need. And it’s FREE. Plus you don’t have to write any custom CSS!
 
-    If no stable tag is provided, it is assumed that trunk is stable, but you should specify "trunk" if that's where
-you put the stable version, in order to eliminate any doubt.
+This plugin provides customization options via the Theme Customizer.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Download plugin [https://github.com/MRKWP/df-divi-woocommerce-tweaks/master.zip](https://github.com/MRKWP/df-divi-woocommerce-tweaks/master.zip)
+2. Upload, install and activate in your WordPress website.
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Is their any known conflict with this plugin? =
 
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
+At this stage we have not had any reported.
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. Theme customizer for setting woocommerce settings.
 
 == Changelog ==
 
-= 1.0 =
-* A change since the previous version.
-* Another change.
+= 1.3.1 - March 18, 2019 =
+* Fix for licensing code check bug
 
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+= 1.2.2 - August 20, 2018 =
+* Return to shop button css fixed.
+* Fixed icon size on button hover :after psuedo selector
+* Fixed woocommerce message style when item is removed from cart.
 
-== Upgrade Notice ==
+= 1.2.1 - August 15, 2018 =
+* Fixed divi color scheme css override issue
 
-= 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
+= 1.2.0 - July 20, 2018 =
+* Updated theme customizer with additional button styles
+* Added theme customizer for alert message styles
+* Added theme customizer for "on sale" badge styles
 
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
+= 1.1.0 - April 25, 2018 =
+* Theme customizer for button styles
 
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+= 1.0.0 - April 23, 2018 =
+* Initial version

@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:     WooCommerce Colours For Divi
- * Plugin URI:      https://www.diviframework.com
+ * Plugin URI:      https://www.mrkwp.com
  * Description:     WooCommerce colours for Divi theme.
- * Author:          Divi Framework
- * Author URI:      https://www.diviframework.com
+ * Author:          M R K Development Pty Ltd
+ * Author URI:      https://www.mrkwp.com
  * Text Domain:     df-divi-woocommerce-tweaks
  * Domain Path:     /languages
  * Version:         1.3.1

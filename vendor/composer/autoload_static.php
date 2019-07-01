@@ -6,10 +6,6 @@ namespace Composer\Autoload;
 
 class ComposerStaticInitae1c93f09e06d27bc1fb7fe5b0faf9a8
 {
-    public static $files = array (
-        '89ff252b349d4d088742a09c25f5dd74' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
@@ -17,7 +13,6 @@ class ComposerStaticInitae1c93f09e06d27bc1fb7fe5b0faf9a8
         ),
         'D' => 
         array (
-            'DiviFramework\\UpdateChecker\\' => 28,
             'DF\\WC\\Tweaks\\' => 13,
         ),
     );
@@ -26,10 +21,6 @@ class ComposerStaticInitae1c93f09e06d27bc1fb7fe5b0faf9a8
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'DiviFramework\\UpdateChecker\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/diviframework/update-checker/src',
         ),
         'DF\\WC\\Tweaks\\' => 
         array (
